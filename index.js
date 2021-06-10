@@ -61,7 +61,6 @@ salamander["astronautID"] = 2;
 superChimpTwo["astronautID"] = 3;
 astroDog["astronautID"] = 4;
 waterBear["astronautID"] = 5;
-console.log(" ");
 // Create an array to hold the animal objects.
 
 let crew = [superChimpOne , salamander , superChimpTwo , astroDog , waterBear];
@@ -75,15 +74,22 @@ let crew = [superChimpOne , salamander , superChimpTwo , astroDog , waterBear];
 
 // Start an animal race!
 
- let crewSteps = [superChimpOne.stepsTotal , salamander.stepsTotal , superChimpTwo.stepsTotal , astroDog.stepsTotal , waterBear.stepsTotal];
+let crewSteps = [superChimpOne.stepsTotal , salamander.stepsTotal , superChimpTwo.stepsTotal , astroDog.stepsTotal , waterBear.stepsTotal];
 
+let crewTurn = [0, 0, 0, 0, 0];
 
 
 function raceTime(arr){
     for (i=0; i < arr.length; i++){
-        arr[i].move;
+        while (crewSteps[i] > 20){
+            crew[i].move;
+            crewTurn[i] = crewturn[i] + 1;
+             if (crewSteps[i] >= 20){
+                console.log(`${crew[i].name} took ${crewTurn[i]} turns to take 20 steps.`)
+        }
+       }
+
     }
-
-    if ( )
-
 }
+
+raceTime(crew);
